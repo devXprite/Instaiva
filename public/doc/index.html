@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.10.3/swagger-ui.min.css"
+      integrity="sha512-c/nL8uV8W4bgSdxmZQDO0T+34SYDuurZMc2ylKRuqUvTn0CONDptVTnc7EPiXyaGZwsgv3l/i/PDuxV7RY54yw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="swagger-ui"></div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.10.3/swagger-ui-bundle.js"
+      integrity="sha512-fNHCPTAuoNI7DWOb32eo8vHNhtQ5VlnzxrTz6EhBpcaSlwmBI3Bhbx9P3hqbUgABK0mBK2kVXr5VeDl0Geu0PQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.10.3/swagger-ui-standalone-preset.js"
+      integrity="sha512-/oI86l6H4xyb2qBw7deMLpW/+hgB5Fs6kDsh4kgu7KIedjvNwmn8w1enhEv4/A+Lt9IXqi4+T+z3dNDxN+b0xA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      window.onload = function () {
+        const ui = SwaggerUIBundle({
+          url: "./swagger.json",
+          dom_id: "#swagger-ui",
+          presets: [SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset],
+        });
+
+        window.ui = ui;
+      };
+    </script>
+  </body>
+</html>
