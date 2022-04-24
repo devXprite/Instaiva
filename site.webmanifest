@@ -1,0 +1,31 @@
+{
+  "name": "Instaiva - Instagram DP Downloader",
+  "short_name": "Instaiva",
+  "description": "Instaiva is a Free and OpenSource Instagram DP Downloader.",
+  "icons": [
+    {
+      "src": "./assets/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/?source=start",
+  "scope": "/",
+  "background_color": "#121212",
+  "theme_color": "#121212",
+  "display": "standalone",
+  "shortcuts": [
+    {
+      "name": "Instaiva - Instagram DP Downloader",
+      "short_name": "Instaiva",
+      "description": "Instaiva is a Free and OpenSource Instagram DP Downloader.",
+      "url": "/",
+      "icons": [{ "src": "./assets/android-chrome-192x192.png", "sizes": "192x192" }]
+    }
+  ]
+}
