@@ -1,0 +1,48 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Instaiva API",
+    "description": "Simple Instagram API"
+   
+  },
+  "host": "instaiva.herokuapp.com/",
+  "basePath": "/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "paths": {
+     "api/profile/{username}": {
+      
+      "get": {
+        "tags": [
+          "Get profile details"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "example": "instagram"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "User Not found"
+          },"400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  }
+}

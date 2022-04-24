@@ -1,0 +1,296 @@
+* {
+  box-sizing: border-box;
+  transition: all 0.3s;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #121212;
+  color: #ddd;
+  text-align: center;
+  counter-reset: no;
+}
+
+.home {
+  max-width: 700px;
+  min-height: 85vh;
+  margin: auto;
+}
+
+.name {
+  font-size: 3em;
+  font-family: "Comfortaa", cursive;
+  text-align: center;
+  margin: 15vh auto 2vh auto;
+  font-weight: normal;
+  background: linear-gradient(114deg, #e633da 35%, #2bfa97 60%, #3acdff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+  font-size: 0.9em;
+  font-family: "Exo 2", sans-serif;
+  color: #a1a1a1;
+}
+
+.form {
+  background-color: #333;
+  width: 90%;
+  margin: 22vh auto auto auto;
+  border-radius: 0.35em;
+  overflow: hidden;
+  border: 2px solid #333;
+  box-shadow: 1px 2px 3px rgb(0 0 0 / 76%);
+}
+
+.form::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.form input#username,
+.form .submit.btn {
+  height: 40px;
+  background: transparent;
+  font-size: 17px;
+  border: none;
+}
+
+.form input#username {
+  float: left;
+  width: 85%;
+  color: #eee;
+  padding-left: 12px;
+  font-family: "Poppins", sans-serif;
+}
+
+.form .submit.btn {
+  float: left;
+  width: 15%;
+  color: #aaa;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 00.35em;
+}
+
+input#username:focus {
+  outline: none;
+}
+
+button:disabled .fa-search,
+button[disabled] .fa-search {
+  opacity: 0.4;
+}
+
+/* .form.valid .submit.btn:hover {
+  background: limegreen;
+  color: #000;
+} */
+
+.form.invalid {
+  border-color: orangered;
+}
+.form.valid {
+  border-color: lime;
+}
+
+.img.container {
+  width: 320px;
+  height: 320px;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 10px;
+  border: 3px #666 solid;
+  background-color: #333;
+  outline: none;
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+p.img-loading-text {
+  font-family: "Comfortaa", cursive;
+  opacity: 0.5;
+  margin-top: 110px;
+}
+
+.userimg {
+  width: 320px;
+  height: 320px;
+}
+
+.download.btn {
+  background: linear-gradient(54.7deg, #960ead 12%, #0ad8c7 100%);
+  width: 320px;
+  /* max-width: 325px; */
+  height: 40px;
+  border-radius: 0.35em;
+  margin-bottom: 13px;
+  border: 2px black solid;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+.status {
+  display: none;
+  font-size: 14px;
+  font-family: "Exo 2", sans-serif;
+}
+
+p.invalid_username {
+  color: orangered;
+}
+
+p.please_wait {
+  margin-top: 20vh;
+  color: #2df4a5;
+  animation: loading 0.6s infinite alternate ;
+}
+
+@keyframes loading {
+  from {
+    color: #777;
+  }
+  to {
+    color: #ccc;
+  }
+}
+
+table {
+  font-family: "Roboto", sans-serif;
+  border-collapse: collapse;
+  width: 320px;
+  margin: auto;
+}
+
+td,
+th {
+  border: 1px solid #666;
+  padding: 6px;
+}
+
+th {
+  border-bottom: none;
+}
+
+td {
+  border-top: none;
+}
+
+@media screen and (min-width: 600px) {
+  .name {
+    font-size: 4.5em;
+    margin: 18vh auto 0vh auto;
+  }
+  .tagline {
+    font-size: 1em;
+  }
+  .status {
+    font-size: 16px;
+  }
+  .form input#username,
+  .form .submit.btn {
+    height: 44px;
+    font-size: 20px;
+  }
+  .form .submit.btn {
+    font-size: 24px;
+  }
+}
+
+.swal2-popup {
+  font-family: "Dosis", sans-serif;
+  border: 2px solid #333;
+}
+
+.swal2-content {
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+.swal2-icon.swal2-warning {
+  border-color: orangered;
+  color: orangered;
+}
+
+a {
+  color: dodgerblue;
+  text-decoration: none;
+}
+
+.other_details {
+  background: #212121;
+  width: 92%;
+  border-radius: 0.5em;
+  margin: 2em auto;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  padding: 1em;
+  font-size: 0.9em;
+  max-width: 700px;
+  box-shadow: 1px 2px 3px rgb(0 0 0 / 76%);
+}
+
+.other_details p {
+  color: lawngreen;
+  margin-top: 10px;
+}
+
+.other_details p::before {
+  counter-increment: no;
+  content: counter(no) ". ";
+  color: orange;
+}
+
+.other_details p span {
+  color: #eee;
+}
+
+.results {
+  display: none;
+}
+
+.results > div:nth-child(3) > table:nth-child(2) > tbody > tr > td {
+  padding: 12px;
+}
+
+.fa-spinner {
+  display: none;
+  color: orange;
+}
+
+footer {
+  padding: 1em;
+  background-color: #212121;
+  font-family: "Roboto", sans-serif;
+  box-shadow: -2px 0px 6px #000;
+}
+
+footer p {
+  padding: 3px 15px;
+  color: #ccc;
+}
+
+footer p:nth-child(2) {
+  margin-bottom: 15px;
+}
+footer .gh_buttons span {
+  margin: 10px;
+}
+
+tmp {
+  font-family: "Comfortaa", cursive;
+  font-family: "Dosis", sans-serif;
+  font-family: "Exo 2", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+}

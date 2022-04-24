@@ -1,0 +1,1 @@
+server: node ./api/index.js
