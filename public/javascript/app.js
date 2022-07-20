@@ -1,4 +1,4 @@
-const checkUsername = async (value) => {
+ const checkUsername = async (value) => {
   if (/^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{2,29}$/gim.test(value)) {
     $("form").addClass("valid").removeClass("invalid");
     $(".submit.btn").prop("disabled", false);
@@ -12,6 +12,7 @@ const checkUsername = async (value) => {
   }
 };
 
+/*
 const saveImg = async (url, username = "instagram") => {
   $.ajax({
     url: url,
@@ -172,3 +173,6 @@ $("#form").submit((e) => {
 });
 
 $(".userimg").on("error", imgLoadErr);
+ */
+
+console.log("App is OK")

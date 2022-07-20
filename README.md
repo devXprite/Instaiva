@@ -16,9 +16,9 @@
     <br />
     <a href="https://Instaiva.js.org/">View Demo</a>
     ·
-    <a href="https://github.com/7orp3do/instaiva/issues">Report Bug</a>
+    <a href="https://github.com/devXprite/instaiva/issues">Report Bug</a>
     ·
-    <a href="https://github.com/7orp3do/instaiva/issues">Request Feature</a>
+    <a href="https://github.com/devXprite/instaiva/issues">Request Feature</a>
   </p>
 </div>
 

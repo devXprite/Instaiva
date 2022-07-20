@@ -1,48 +1,27 @@
 {
   "name": "instaiva",
-  "version": "1.0.0",
-  "description": "A free and open source Instagram DP downloader.",
-  "main": "./api/index.js",
-  "nodemonConfig": {
-    "ext": "js",
-    "ignore": [
-      "cookies.json",
-      "db/*"
-    ],
-    "delay": "2"
-  },
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "nodemon",
-    "start": "node ./api/index.js",
-    "check": "prettier --check .",
-    "format": "prettier --write ."
+    "start": "node ./bin/www"
   },
-  "keywords": [
-    "instagram","api","OSINT"
-  ],
-  "author": {
-    "name": "Prateek Singh",
-    "email": "bhps82@gmail.com"
-  },
-  "license": "GPL-3.0 License",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/7orp3do/instaiva.git"
-  },
-  "homepage": "https://instaiva.js.org/",
   "dependencies": {
-    "body-parser": "^1.20.0",
-    "connect-timeout": "^1.9.0",
+    "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.0",
-    "express": "^4.17.3",
-    "express-rate-limit": "^6.3.0",
-    "helmet": "^5.0.2",
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.1",
+    "express": "~4.16.1",
+    "express-rate-limit": "^6.4.0",
+    "helmet": "^5.1.0",
+    "http-errors": "~1.6.3",
     "instagram-web-api": "^2.2.2",
+    "less-middleware": "~2.2.1",
+    "morgan": "~1.9.1",
     "node-cache": "^5.1.2",
+    "pug": "2.0.0-beta11",
     "tough-cookie-filestore2": "^1.0.0"
   },
   "devDependencies": {
-    "prettier": "2.5.1"
+    "gulp": "^4.0.2"
   }
 }

@@ -1,0 +1,58 @@
+extends layout
+
+block content
+  noscript
+      h1 Sorry Your Browser dont support JAVASCRIPT.
+    main
+      .home
+        h1.name Instaiva
+        p.tagline Free and OpenSource Instagram DP Downloader
+        form#form.form
+          input#username.username(type='text', name='username', oninput='checkUsername(this.value)', placeholder='Your Username', autocomplete='username')
+          button.submit.btn(type='submit', aria-label='search')
+            i.fa.fa-search
+            i.fas.fa-spinner.fa-pulse(style='display: none;')
+        p.invalid_username.status
+          | Invalid Username 
+          i.fa.fa-exclamation-triangle
+        p.please_wait.status
+          | Getting Profile Data 
+          br
+                It may take up to 10 sec...
+      .results
+        .img.container
+          img#userimg.userimg(src='#', alt='')
+          p.img-loading-text
+            | Please wait 
+            br
+            br
+                    Image is loading
+        button.btn.download
+          | Download Image 
+          i.fas.fa-download
+        div
+          table
+            tbody
+              tr
+                th Posts
+                th Following
+                th Followers
+              tr
+                td#posts --
+                td#following --
+                td#followers --
+          table
+            tbody
+              tr
+                td
+                  a#opn-insta(href='#') Open in Instagram
+        .other_details
+          h2.h2 Other Details
+          #other_details
+    footer
+      div
+        p This is open soure on Github.
+        p If you like it, please consider giving this repo a &#x2B50;.
+      .gh_buttons
+        a.github-button(href='https://github.com/devXprite/instaiva', data-color-scheme='no-preference: light; light: dark; dark: dark;', data-icon='octicon-star', data-size='large', data-show-count='true', aria-label='Star devXprite/instaiva on GitHub') Star
+        a.github-button(href='https://github.com/devXprite/instaiva/fork', data-color-scheme='no-preference: light; light: dark; dark: dark;', data-icon='octicon-repo-forked', data-size='large', data-show-count='true', aria-label='Fork devXprite/instaiva on GitHub') Fork
